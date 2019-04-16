@@ -1,0 +1,16 @@
+/* hr {
+  width: 25%;
+  margin-top: 300px;
+  height: 10px;
+  border: none;
+  background-color: black;
+} */
+
+div {
+  width: 0; 
+  height: 0; 
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  
+  border-bottom: 70px solid red
+}

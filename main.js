@@ -1,13 +1,13 @@
-const line = document.querySelector('div')
-const para = document.querySelector('p')
-line.style.transform = 'rotate(45deg)'
+const line = document.querySelector('img')
+const direction = document.getElementById('degree')
 
 function deviceOrientationListener (event) {
   let alpha = event.alpha
-  para.innerHTML = alpha.toFixed(0)
+  let degree = alpha > (360 - alpha) ? (360 - alpha) : alpha
+  direction.innerHTML = degree.toFixed(0) + '&deg'
   line.style.transform = 'rotate(' + alpha + 'deg)'
 }
 
-if (window.DeviceOrientationEvent) { // Check if device is compatible
+if (window.DeviceOrientationEvent) {
   window.addEventListener('deviceorientation', deviceOrientationListener)
 }
